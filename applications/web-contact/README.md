@@ -1,5 +1,9 @@
 # Web-Contact Application
 
+## Datamodel
+
+Download [here](https://raw.githubusercontent.com/Netsach/concrete-community/master/applications/web-contact/datamodel.yaml)
+
 ## Models
 
 **ContactRequest**
