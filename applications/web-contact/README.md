@@ -40,9 +40,9 @@ $.ajax({
 
 ### Design
 
-[design](/concrete-community/applications/web-contact/assets/design.png)
+![design](/concrete-community/applications/web-contact/assets/design.png)
 
 ### Backoffice
 
-[backoffice](/concrete-community/applications/web-contact/assets/backoffice.png)
+![backoffice](/concrete-community/applications/web-contact/assets/backoffice.png)
 
