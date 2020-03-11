@@ -17,4 +17,5 @@ This repository is the place to share datamodels and plugins made for [concrete-
 
 # Data Model Index
 
-- First app ?
+- [WebContact](./applications/web-contact) : A basic app to collect contact requests from a website
+
