@@ -40,9 +40,9 @@ $.ajax({
 
 ### Design
 
-[design](./assets/design.png)
+[design](/applications/web-contact/assets/design.png)
 
 ### Backoffice
 
-[backoffice](./assets/backoffice.png)
+[backoffice](/applications/web-contact/assets/backoffice.png)
 
