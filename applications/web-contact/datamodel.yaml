@@ -1,0 +1,130 @@
+manifest:
+  version: 1.0.0
+  attributes: []
+  data_modeling:
+    roles: []
+    models:
+      - fields:
+          - attributes: {}
+            datatype: char
+            name: email
+          - attributes: {}
+            datatype: char
+            name: first_name
+          - attributes: {}
+            datatype: char
+            name: last_name
+        name: User
+        uid: 13dc7467-d864-447d-b78d-8c2b987d5015
+        description: null
+        representation_field: email
+        is_default_public: false
+      - fields:
+          - attributes: {}
+            datatype: char
+            name: name
+          - attributes:
+              to:
+                uid: 13dc7467-d864-447d-b78d-8c2b987d5015
+                name: User
+              reverse: concrete_groups
+            datatype: m2m
+            name: members
+        name: Group
+        uid: 2f1301b5-7936-4fe2-a2c8-48bfb49384fc
+        description: null
+        representation_field: name
+        is_default_public: false
+      - fields:
+          - attributes: {}
+            datatype: email
+            name: email
+          - attributes:
+              allow_empty: true
+            datatype: txt
+            name: message
+          - attributes:
+              default: false
+            datatype: bool
+            name: feedback_done
+          - attributes: {}
+            datatype: char
+            name: name
+        name: ContactRequest
+        uid: cfa75d4c-831e-4eed-9472-4421718895ef
+        representation_field: email
+        is_default_public: false
+    version: 1.0.0
+    attributes: []
+    permissions:
+      - model_uid: 13dc7467-d864-447d-b78d-8c2b987d5015
+        model_name: User
+        lookups: []
+        minimum_levels:
+          create: admin
+          delete: admin
+          update: admin
+          retrieve: admin
+      - model_uid: 2f1301b5-7936-4fe2-a2c8-48bfb49384fc
+        model_name: Group
+        lookups: []
+        minimum_levels:
+          create: manager
+          delete: admin
+          update: manager
+          retrieve: authenticated
+      - model_uid: cfa75d4c-831e-4eed-9472-4421718895ef
+        model_name: ContactRequest
+        lookups: []
+        minimum_levels:
+          create: authenticated
+          delete: admin
+          update: admin
+          retrieve: admin
+    application_id: ""
+    resource_queries:
+      - model_uid: 13dc7467-d864-447d-b78d-8c2b987d5015
+        model_name: User
+        search_fields:
+          - email
+        filter_fields:
+          - email
+        display_fields:
+          - email
+          - first_name
+          - last_name
+        export_fields: []
+      - model_uid: 2f1301b5-7936-4fe2-a2c8-48bfb49384fc
+        model_name: Group
+        search_fields:
+          - name
+        filter_fields:
+          - name
+        display_fields:
+          - name
+        export_fields: []
+      - model_uid: cfa75d4c-831e-4eed-9472-4421718895ef
+        model_name: ContactRequest
+        search_fields:
+          - email
+          - message
+        filter_fields:
+          - email
+          - feedback_done
+        display_fields:
+          - email
+          - message
+          - feedback_done
+        export_fields:
+          - email
+          - message
+          - feedback_done
+    one_to_many_relations: []
+    many_to_many_relations:
+      - source_field: members
+        source_model:
+          uid: 2f1301b5-7936-4fe2-a2c8-48bfb49384fc
+          name: Group
+        target_model:
+          uid: 13dc7467-d864-447d-b78d-8c2b987d5015
+          name: User
