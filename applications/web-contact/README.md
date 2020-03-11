@@ -19,7 +19,7 @@ Include this code snippet to any website using jquery to enable contact requests
 ```javascript
 
 $.ajax({
-    url: "https://<you-instance-uuid>.instances.fr1.caas.microservices.rest/api/v1.1/contact-request/",
+    url: "https://<you-instance-endpoint>.microservices.rest/api/v1.1/contact-request/",
     type: "POST",
     data: {
       name: name,
