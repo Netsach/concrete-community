@@ -1,6 +1,6 @@
-# Web-Contacts Application
+# Web-Contact Application
 
-## Data model
+## Models
 
 **ContactRequest**
 
