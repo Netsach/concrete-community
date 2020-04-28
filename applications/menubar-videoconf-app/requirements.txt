@@ -1,0 +1,4 @@
+rumps
+requests
+pyperclip
+python-decouple
